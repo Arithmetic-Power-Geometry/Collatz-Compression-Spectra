@@ -1,0 +1,14 @@
+[
+  "test_core.py::test_accelerated_step",
+  "test_core.py::test_exact_decomposition",
+  "test_core.py::test_exact_valuation_word_residues",
+  "test_core.py::test_exact_witness_count",
+  "test_core.py::test_extremizers_are_arithmetically_realized",
+  "test_core.py::test_iid_baseline",
+  "test_core.py::test_near_extremal_count_bound_exhaustive_small",
+  "test_core.py::test_residual_extrema_exhaustive_small",
+  "test_core.py::test_strict_supercritical_exponent_positive",
+  "test_core.py::test_uniform_certificate_consistency",
+  "test_core.py::test_window_count_against_bruteforce",
+  "test_core.py::test_witness_word_count_bound_small"
+]
