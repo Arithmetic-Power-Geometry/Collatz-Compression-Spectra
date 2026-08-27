@@ -1,0 +1,45 @@
+name: One-click reproducibility
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: "paper = manuscript-scale run; smoke = fast validation"
+        required: true
+        default: "paper"
+        type: choice
+        options: [paper, smoke]
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  reproduce:
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Mathematical tests
+        run: python -m pytest -q
+      - name: Reproduce analysis
+        shell: bash
+        run: |
+          PROFILE="${{ github.event.inputs.profile || 'smoke' }}"
+          if [ "$PROFILE" = "paper" ]; then
+            python run_analysis.py --out analysis_output --n-raw 200000 --n-spectrum 200000 --max-m 128 --n-validation 10000 --workers 2
+          else
+            python run_analysis.py --out analysis_output --n-raw 5000 --n-spectrum 5000 --max-m 32 --n-validation 1000 --workers 2
+          fi
+      - name: Upload generated tables and figures
+        uses: actions/upload-artifact@v4
+        with:
+          name: collatz-reproducibility-output
+          path: analysis_output/
