@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying manuscript."
+title: "Collatz Compression Spectra"
+type: software
+authors:
+  - family-names: "Akhtar"
+    given-names: "Mohammad Amir Khusru"
+date-released: 2026-08-27
+license: Apache-2.0
+version: 2.0.0
+repository-code: "https://github.com/Arithmetic-Power-Geometry/Collatz-Compression-Spectra"
+preferred-citation:
+  type: generic
+  authors:
+    - family-names: "Akhtar"
+      given-names: "Mohammad Amir Khusru"
+  title: "Compression Spectra of Collatz Orbits: Sharp Residual Ordering, Exact Valuation Cylinders, and Near-Extremal Sparsity"
+  year: 2026
+  version: "V1"
+  doi: "10.5281/zenodo.22015248"
+  publisher:
+    name: "Zenodo"

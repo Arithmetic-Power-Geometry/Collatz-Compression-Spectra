@@ -1,0 +1,9 @@
+metric,value
+N,200000.0
+reached_1,200000.0
+max_stopping_time,382.0
+argmax_stopping_time,156159.0
+median_stopping_time,107.0
+max_excursion,17202377752.0
+argmax_excursion,159487.0
+median_excursion,285514.0

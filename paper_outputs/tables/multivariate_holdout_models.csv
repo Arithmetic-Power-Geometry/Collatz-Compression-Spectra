@@ -1,0 +1,4 @@
+model,features,train_r2,test_r2,intercept,std_beta_compression_deficit,std_beta_max_residual,std_beta_total_stopping_time,std_beta_odd_steps,std_beta_log_n
+D_only,compression_deficit,0.6297835442558819,0.6360356329967873,1.3617576571889145,0.8776250782276775,,,,
+D_plus_residual,compression_deficit;max_residual,0.6297906386882504,0.636053418438572,1.3617576571889147,0.8777496048222289,-0.0029482203664257106,,,
+full_controls,compression_deficit;max_residual;total_stopping_time;odd_steps;log_n,0.64080318252598,0.646531510535389,1.3617576571889143,0.8255979057907994,-0.02932103001443939,0.06579244396941042,0.0667875664518356,-0.022019796940742742

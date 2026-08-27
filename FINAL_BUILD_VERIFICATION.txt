@@ -1,0 +1,37 @@
+FINAL BUILD VERIFICATION
+========================
+
+Package: Compression Spectra of Collatz Orbits - v3
+
+LaTeX/Biber
+- pdflatex -> biber -> pdflatex -> pdflatex: PASS
+- Final PDF pages: 31
+- Final-log warnings/errors/undefined references/overfull/underfull boxes: 0
+- Tables referenced immediately before appearance: 11/11
+- Figures referenced immediately before appearance: 13/13
+- Algorithms referenced immediately before appearance: 2/2
+- Bibliography entries: 70
+- Bibliography entries cited in text: 70/70
+- Missing citation keys: 0
+- Uncited bibliography entries: 0
+- DOI entries: 51
+- DOI syntax audit: PASS
+
+Artifact consistency
+- Supplied artifact tables: 18 CSV files
+- Supplied artifact figures: 13 PDF files
+- Manuscript-artifact displayed-value checks: 43/43 PASS
+- Manuscript figure files: copied directly from supplied reproducibility artifact
+
+Software
+- pytest: 12/12 PASS
+- py_compile: PASS
+- smoke analysis: PASS (35 generated files)
+- Full manuscript-scale rerun: not completed in this container because it exceeded the execution window; the user-supplied full artifact is audited directly against the manuscript and is shipped byte-for-byte in paper_outputs/ and analysis_output/.
+
+Bibliographic updates
+- Alon, Behajaina & Paran (2024): volume 99 added.
+- Paparella (2024): volume 695, pages 163-167 added.
+- Paparella (2025) corrigendum: added and cited.
+
+See MANUSCRIPT_ARTIFACT_AUDIT.md for row-level and float-reference details.
