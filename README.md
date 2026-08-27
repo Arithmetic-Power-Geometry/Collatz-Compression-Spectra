@@ -32,7 +32,7 @@ The software implements exact finite-time analysis of accelerated Collatz/Syracu
 - automated theorem and consistency tests; and
 - an interactive parameter-exploration application.
 
-## One-click GitHub reproducibility
+## GitHub reproducibility
 
 After uploading the contents of this folder to a GitHub repository:
 
